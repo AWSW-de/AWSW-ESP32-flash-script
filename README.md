@@ -11,4 +11,4 @@ Everything will be downloaded and executed for you... You just need to wait some
 <img src="./Images/image0.png">
 
 
-! IMPORTANT: You are using this script at your own risk. The manual way to Setup my projects is well described too !
+! IMPORTANT: You are using this script at your own risk. The manual way to setup my projects is well described too !
