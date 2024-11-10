@@ -1,7 +1,7 @@
 ﻿# Automatic AWSW ESP32 flash script by AWSW on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! # # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! # # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! #
 
-$ScriptVersion = "V1.0.0" # 10.11.2024
+$ScriptVersion = "V1.1.0" # 10.11.2024
 
 #####################################################################################################
 # Was the script started with Administrator priviliges?:
@@ -92,7 +92,7 @@ Function CreateMenu{
 
 Do{
     #cls
-    CreateMenu -Selections 'WordClock 16x8  - 2023 (ESP32 D1 mini)','WordClock 16x16 - 2023 (ESP32 D1 mini)','WordClock 16x8  - 2024 (ESP32 NodeMCU)','WordClock 16x16 - 2024 (ESP32 NodeMCU)' -Title 'Choose your AWSW project to flash to the ESP32:' -IncludeExit -IncludeErase # ,'WordCalendar    - 2024 (ESP32 NodeMCU)'
+    CreateMenu -Selections 'WordClock 16x8  - 2023 (ESP32 D1 mini)','WordClock 16x16 - 2023 (ESP32 D1 mini)','WordClock 16x8  - 2024 (ESP32 NodeMCU)','WordClock 16x16 - 2024 (ESP32 NodeMCU)','WordCalendar    - 2024 (ESP32 NodeMCU)' -Title 'Choose your AWSW project to flash to the ESP32:' -IncludeExit -IncludeErase # 
     $Response = Read-Host "Choose the project to flash in the next steps to the ESP32"
 }While($Response -notin 1,2,3,4,5,'e','x')
 
