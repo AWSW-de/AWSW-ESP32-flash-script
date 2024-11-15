@@ -1,7 +1,7 @@
 ﻿# Automatic AWSW ESP32 flash script by AWSW on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! # # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! # # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! #
 
-$ScriptVersion = "V1.1.0" # 10.11.2024
+$ScriptVersion = "V1.1.1" # 15.11.2024
 
 #####################################################################################################
 # Was the script started with Administrator priviliges?:
@@ -232,7 +232,7 @@ if ($PythonWasInstalled -eq "yes") {
     python -V 
     Write-Host " "
     Write-Host " "
-    Write-Host "Instaling PIP and activate the ESP32 flash tool environment..."
+    Write-Host "Installing PIP and activate the ESP32 flash tool environment..."
     Write-Host " "
     cd $DestinationFolder1
     Sleep 1
@@ -292,7 +292,7 @@ for ($i = 5; $i -gt 0; $i--) {
 #####################################################################################################
 clear
 Write-Host " "
-Write-Host "STEP 7 OF" $ScriptSteps "- JUST WAIT - Erasing and then flashing the ESP32 now:"
+Write-Host "STEP 7 OF" $ScriptSteps "- JUST WAIT - Flashing the ESP32 now:"
 Write-Host " "
 Write-Host " "
 Write-Host "PLEASE JUST WAIT !!!"
