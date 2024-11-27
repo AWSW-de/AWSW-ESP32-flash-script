@@ -9,7 +9,7 @@ Everything will be downloaded and executed for you... You just need to wait some
 
 Please watch this video that shows the usage and the process to add the device to your WiFi: https://youtu.be/oiCbp8OFSus
 
-[!AWSW ESP32 flash script](http://img.youtube.com/vi/oiCbp8OFSus/0.jpg)](http://www.youtube.com/watch?v=oiCbp8OFSus "AWSW ESP32 flash script")
+[![AWSW ESP32 flash script](http://img.youtube.com/vi/oiCbp8OFSus/0.jpg)](http://www.youtube.com/watch?v=oiCbp8OFSus "AWSW ESP32 flash script")
 
 
 <img src="./Images/image1.png">
