@@ -15,4 +15,4 @@ Please watch this video that shows the usage and the process to add the device t
 <img src="./Images/image1.png">
 
 
-! IMPORTANT: You are using this script at your own risk. !
+!!! IMPORTANT: You are using this script at your own risk !!!
