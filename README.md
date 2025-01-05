@@ -5,7 +5,7 @@ AWSW ESP32 flash script
 
 This script can flash your ESP32 board fully automatically without the need of installing Arduino IDE or any library.
 
-You will find a script for MS Windows 10/11 and thanks a lot to @johnneerdael for adding this script to macOS. =)
+You will find a script for MS Windows 10/11 and thanks a lot to @johnneerdael for adding a variant of this script for the usage in macOS. =)
 
 Everything will be downloaded and executed for you... You just need to wait some minutes until the process is finished.
 
