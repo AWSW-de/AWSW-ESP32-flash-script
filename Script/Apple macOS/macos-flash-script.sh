@@ -3,7 +3,7 @@
 # Automatic AWSW ESP32 flash script by AWSW (macOS version)
 # Based on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 
-SCRIPT_VERSION="V1.2.0-mac" # 04.01.2025
+SCRIPT_VERSION="V1.3.0-macOS" # 11.03.2025
 
 #####################################################################################################
 # Welcome text output
@@ -55,10 +55,10 @@ print_menu() {
     echo "╟$(printf '─%.0s' $(seq 1 $width))╢"
     echo "║  1. WordClock 16x8     - 2023           (ESP32 D1 mini)              ║"
     echo "║  2. WordClock 16x16    - 2023           (ESP32 D1 mini)              ║"
-    echo "║  3. WordClock 16x8     - 2024           (ESP32 NodeMCU)              ║"
+    echo "║  3. WordClock 16x8     - 2024/2025      (ESP32 NodeMCU)              ║"
     echo "║  4. WordClock 16x16    - 2024/2025      (ESP32 NodeMCU)              ║"
     echo "║  5. WordCalendar 16x16 - 2024/2025      (ESP32 NodeMCU)              ║"
-    echo "║                                                                       ║"
+    echo "║                                                                      ║"
     echo "║  E - Erase all ESP32 flash content only                              ║"
     echo "║  X - Exit the script without flashing the ESP32                      ║"
     echo "╚$(printf '═%.0s' $(seq 1 $width))╝"
@@ -83,7 +83,7 @@ while true; do
             ;;
         3)
             myURL="wordclock-16x8.awsw.de/nodemcu"
-            myProject="WordClock 16x8 - 2024"
+            myProject="WordClock 16x8 - 2024/2025"
             eraseESP="0"
             break
             ;;
