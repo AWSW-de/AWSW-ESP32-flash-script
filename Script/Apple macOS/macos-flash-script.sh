@@ -3,7 +3,7 @@
 # Automatic AWSW ESP32 flash script by AWSW (macOS version)
 # Based on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 
-SCRIPT_VERSION="V1.3.0-macOS" # 11.03.2025
+SCRIPT_VERSION="V1.4.0-macOS" # 14.04.2025
 
 #####################################################################################################
 # Welcome text output
@@ -47,20 +47,21 @@ echo "STEP 1 OF $SCRIPT_STEPS - Select your project to be flashed to the ESP32:"
 echo
 
 print_menu() {
-    local width=78
+    local width=83
     local title="Choose your AWSW project to flash to the ESP32:"
     
     echo "╔$(printf '═%.0s' $(seq 1 $width))╗"
-    echo "║$(printf ' %.0s' $(seq 1 $(((width-${#title})/2))))$title$(printf ' %.0s' $(seq 1 $(((width-${#title})/2)))) ║"
+    echo "║$(printf ' %.0s' $(seq 1 $(((width-${#title})/2))))$title$(printf ' %.0s' $(seq 1 $(((width-${#title})/2))))║"
     echo "╟$(printf '─%.0s' $(seq 1 $width))╢"
-    echo "║  1. WordClock 16x8     - 2023           (ESP32 D1 mini)                      ║"
-    echo "║  2. WordClock 16x16    - 2023           (ESP32 D1 mini)                      ║"
-    echo "║  3. WordClock 16x8     - 2024/2025      (ESP32 NodeMCU)                      ║"
-    echo "║  4. WordClock 16x16    - 2024/2025      (ESP32 NodeMCU)                      ║"
-    echo "║  5. WordCalendar 16x16 - 2024/2025      (ESP32 NodeMCU)                      ║"
-    echo "║                                                                              ║"
-    echo "║  E - Erase all ESP32 flash content only                                      ║"
-    echo "║  X - Exit the script without flashing the ESP32                              ║"
+    echo "║  1. WordClock 16x8          - 2023           (ESP32 D1 mini)                      ║"
+    echo "║  2. WordClock 16x16         - 2023           (ESP32 D1 mini)                      ║"
+    echo "║  3. WordClock 16x8          - 2024/2025      (ESP32 NodeMCU)                      ║"
+    echo "║  4. WordClock 16x16         - 2024/2025      (ESP32 NodeMCU)                      ║"
+    echo "║  5. WordCalendar 16x16      - 2024/2025      (ESP32 NodeMCU)                      ║"
+    echo "║  6. WordClock 14x14 Classic - 2025           (ESP32 NodeMCU)                      ║"
+    echo "║                                                                                   ║"
+    echo "║  E - Erase all ESP32 flash content only                                           ║"
+    echo "║  X - Exit the script without flashing the ESP32                                   ║"
     echo "╚$(printf '═%.0s' $(seq 1 $width))╝"
 }
 
@@ -96,6 +97,12 @@ while true; do
         5)
             myURL="wordcalendar.awsw.de/nodemcu"
             myProject="WordCalendar - 2024/2025"
+            eraseESP="0"
+            break
+            ;;
+        6)
+            myURL="wordclock-14x14.awsw.de/nodemcu"
+            myProject="WordClock 14x14 Classic - 2025"
             eraseESP="0"
             break
             ;;
