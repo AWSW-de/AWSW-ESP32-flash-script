@@ -14,7 +14,7 @@ Please watch this video that shows the usage and the process to add the device t
 [![AWSW ESP32 flash script](http://img.youtube.com/vi/oiCbp8OFSus/0.jpg)](http://www.youtube.com/watch?v=oiCbp8OFSus "AWSW ESP32 flash script")
 
 
-<img src="./Images/image1.png">
+<img src="./Images/image2.png">
 
 
 !!! IMPORTANT: You are using this script at your own risk !!!
