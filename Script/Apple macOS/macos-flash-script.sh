@@ -3,7 +3,7 @@
 # Automatic AWSW ESP32 flash script by AWSW (macOS version)
 # Based on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 
-SCRIPT_VERSION="V1.4.0-macOS" # 14.04.2025
+SCRIPT_VERSION="V1.5.0-macOS" # 01.08.2025
 
 #####################################################################################################
 # Welcome text output
@@ -59,6 +59,7 @@ print_menu() {
     echo "║  4. WordClock 16x16         - 2024/2025      (ESP32 NodeMCU)                      ║"
     echo "║  5. WordCalendar 16x16      - 2024/2025      (ESP32 NodeMCU)                      ║"
     echo "║  6. WordClock 14x14 Classic - 2025           (ESP32 NodeMCU)                      ║"
+    echo "║  7. 12x Smart Home button   - 2025           (ESP32 Lolin32)                      ║"
     echo "║                                                                                   ║"
     echo "║  E - Erase all ESP32 flash content only                                           ║"
     echo "║  X - Exit the script without flashing the ESP32                                   ║"
@@ -103,6 +104,12 @@ while true; do
         6)
             myURL="wordclock-14x14.awsw.de/nodemcu"
             myProject="WordClock 14x14 Classic - 2025"
+            eraseESP="0"
+            break
+            ;;
+        7)
+            myURL="smarthome12xbutton.awsw.de/lolin32"
+            myProject="12x Smart Home button - 2025"
             eraseESP="0"
             break
             ;;
