@@ -92,7 +92,7 @@ Function CreateMenu{
 
 Do{
     #cls
-    CreateMenu -Selections 'WordClock 16x8     - 2023           (ESP32 D1 mini)','WordClock 16x16    - 2023           (ESP32 D1 mini)','WordClock 16x8     - 2024/2025      (ESP32 NodeMCU)','WordClock 16x16    - 2024/2025      (ESP32 NodeMCU)','WordCalendar 16x16 - 2024/2025      (ESP32 NodeMCU)','WordClock 14x14 Classic - 2025      (ESP32 NodeMCU)','12x Smart Home button   - 2025      (ESP32 Lolin32)','School Table            - 2025      (WaveShare ESP32)' -Title 'Choose your AWSW project to flash to the ESP32:' -IncludeExit -IncludeErase # 
+    CreateMenu -Selections 'WordClock 16x8     - 2023           (ESP32 D1 mini)','WordClock 16x16    - 2023           (ESP32 D1 mini)','WordClock 16x8     - 2024/2025      (ESP32 NodeMCU)','WordClock 16x16    - 2024/2025      (ESP32 NodeMCU)','WordCalendar 16x16 - 2024/2025      (ESP32 NodeMCU)','WordClock 14x14 Classic - 2025      (ESP32 NodeMCU)','12x Smart Home button   - 2025      (ESP32 Lolin32)','School Timetable        - 2025      (WaveShare ESP32)' -Title 'Choose your AWSW project to flash to the ESP32:' -IncludeExit -IncludeErase # 
     $Response = Read-Host "Choose the project to flash in the next steps to the ESP32"
 }While($Response -notin 1,2,3,4,5,6,7,8,'e','x')
 
@@ -115,7 +115,7 @@ switch ($Response)
     7 { $myURL = "smarthome12xbutton.awsw.de/lolin32"
         $myProject = "12x Smart Home button - 2025"}
     8 { $myURL = "schooltimetable.awsw.de/waveshareesp32"
-        $myProject = "School Table - 2025"}
+        $myProject = "School Timetable - 2025"}
     e { $eraseESP = "1"
 	    $myProject = "JUST ERASE THE ESP32 ONLY" } 
     x { Exit }

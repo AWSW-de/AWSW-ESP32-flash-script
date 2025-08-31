@@ -60,7 +60,7 @@ print_menu() {
     echo "║  5. WordCalendar 16x16      - 2024/2025      (ESP32 NodeMCU)                      ║"
     echo "║  6. WordClock 14x14 Classic - 2025           (ESP32 NodeMCU)                      ║"
     echo "║  7. 12x Smart Home button   - 2025           (ESP32 Lolin32)                      ║"
-	echo "║  8. School Table            - 2025           (WaveShare ESP32)                    ║"
+	echo "║  8. School Timetable        - 2025           (WaveShare ESP32)                    ║"
     echo "║                                                                                   ║"
     echo "║  E - Erase all ESP32 flash content only                                           ║"
     echo "║  X - Exit the script without flashing the ESP32                                   ║"
@@ -116,7 +116,7 @@ while true; do
             ;;
         8)
             myURL="schooltimetable.awsw.de/waveshareesp32"
-            myProject="School Table - 2025"
+            myProject="School Timetable - 2025"
             eraseESP="0"
             break
             ;;			
