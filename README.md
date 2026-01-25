@@ -8,7 +8,7 @@ This script can flash your ESP32 board fully automatically without the need of i
 You will find a script for:
 - **MS Windows 10/11** - PowerShell script for Windows systems
 - **macOS** - Thanks a lot to @johnneerdael for adding a variant of this script for macOS =)
-- **Linux** - Bash script for Debian/Ubuntu and other Linux distributions
+- **Linux** - Bash script for Debian/Ubuntu and other Linux distributions. Thanks a lot to @scinnod fot this addon. =)
 
 Everything will be downloaded and executed for you... You just need to wait some minutes until the process is finished.
 
