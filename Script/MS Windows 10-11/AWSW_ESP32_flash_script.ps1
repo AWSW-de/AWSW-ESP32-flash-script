@@ -1,7 +1,7 @@
 ﻿# Automatic AWSW ESP32 flash script by AWSW on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! # # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! # # DO NOT CHANGE ANYTHING FROM THIS LINE ON ! #
 
-$ScriptVersion = "V1.6.0" # 30.08.2025
+$ScriptVersion = "V1.7.0" # 13.07.2026
 
 #####################################################################################################
 # Was the script started with Administrator priviliges?:
@@ -92,9 +92,9 @@ Function CreateMenu{
 
 Do{
     #cls
-    CreateMenu -Selections 'WordClock 16x8     - 2023           (ESP32 D1 mini)','WordClock 16x16    - 2023           (ESP32 D1 mini)','WordClock 16x8     - 2024/2025      (ESP32 NodeMCU)','WordClock 16x16    - 2024/2025      (ESP32 NodeMCU)','WordCalendar 16x16 - 2024/2025      (ESP32 NodeMCU)','WordClock 14x14 Classic - 2025      (ESP32 NodeMCU)','12x Smart Home button   - 2025      (ESP32 Lolin32)','School Timetable        - 2025      (WaveShare ESP32)' -Title 'Choose your AWSW project to flash to the ESP32:' -IncludeExit -IncludeErase # 
+    CreateMenu -Selections 'WordClock 16x8     - 2023           (ESP32 D1 mini)','WordClock 16x16    - 2023           (ESP32 D1 mini)','WordClock 16x8     - 2024/2025      (ESP32 NodeMCU)','WordClock 16x16    - 2024/2025      (ESP32 NodeMCU)','WordCalendar 16x16 - 2024/2025      (ESP32 NodeMCU)','WordClock 14x14 Classic - 2025      (ESP32 NodeMCU)','12x Smart Home button   - 2025      (ESP32 Lolin32)','School Timetable        - 2025      (WaveShare ESP32)','Matrix Pixel Clock 16x16 - 2026' -Title 'Choose your AWSW project to flash to the ESP32:' -IncludeExit -IncludeErase #
     $Response = Read-Host "Choose the project to flash in the next steps to the ESP32"
-}While($Response -notin 1,2,3,4,5,6,7,8,'e','x')
+}While($Response -notin 1,2,3,4,5,6,7,8,9,'e','x')
 
 $eraseESP = "0"
 
@@ -116,6 +116,8 @@ switch ($Response)
         $myProject = "12x Smart Home button - 2025"}
     8 { $myURL = "schooltimetable.awsw.de/waveshareesp32"
         $myProject = "School Timetable - 2025"}
+    9 { $myURL = "awsw.de/MatrixPixelClock16×16"
+        $myProject = "Matrix Pixel Clock 16x16 - 2026"}
     e { $eraseESP = "1"
 	    $myProject = "JUST ERASE THE ESP32 ONLY" } 
     x { Exit }

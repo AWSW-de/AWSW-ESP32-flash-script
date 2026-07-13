@@ -3,7 +3,7 @@
 # Automatic AWSW ESP32 flash script by AWSW (macOS version)
 # Based on https://github.com/AWSW-de/AWSW-ESP32-flash-script
 
-SCRIPT_VERSION="V1.6.0-macOS" # 30.08.2025
+SCRIPT_VERSION="V1.7.0-macOS" # 13.07.2026
 
 #####################################################################################################
 # Welcome text output
@@ -53,14 +53,15 @@ print_menu() {
     echo "╔$(printf '═%.0s' $(seq 1 $width))╗"
     echo "║$(printf ' %.0s' $(seq 1 $(((width-${#title})/2))))$title$(printf ' %.0s' $(seq 1 $(((width-${#title})/2))))║"
     echo "╟$(printf '─%.0s' $(seq 1 $width))╢"
-    echo "║  1. WordClock 16x8          - 2023           (ESP32 D1 mini)                      ║"
-    echo "║  2. WordClock 16x16         - 2023           (ESP32 D1 mini)                      ║"
-    echo "║  3. WordClock 16x8          - 2024/2025      (ESP32 NodeMCU)                      ║"
-    echo "║  4. WordClock 16x16         - 2024/2025      (ESP32 NodeMCU)                      ║"
-    echo "║  5. WordCalendar 16x16      - 2024/2025      (ESP32 NodeMCU)                      ║"
-    echo "║  6. WordClock 14x14 Classic - 2025           (ESP32 NodeMCU)                      ║"
-    echo "║  7. 12x Smart Home button   - 2025           (ESP32 Lolin32)                      ║"
-	echo "║  8. School Timetable        - 2025           (WaveShare ESP32)                    ║"
+    echo "║  1. WordClock 16x8           - 2023           (ESP32 D1 mini)                     ║"
+    echo "║  2. WordClock 16x16          - 2023           (ESP32 D1 mini)                     ║"
+    echo "║  3. WordClock 16x8           - 2024/2025      (ESP32 NodeMCU)                     ║"
+    echo "║  4. WordClock 16x16          - 2024/2025      (ESP32 NodeMCU)                     ║"
+    echo "║  5. WordCalendar 16x16       - 2024/2025      (ESP32 NodeMCU)                     ║"
+    echo "║  6. WordClock 14x14 Classic  - 2025           (ESP32 NodeMCU)                     ║"
+    echo "║  7. 12x Smart Home button    - 2025           (ESP32 Lolin32)                     ║"
+    echo "║  8. School Timetable         - 2025           (WaveShare ESP32)                   ║"
+    echo "║  9. Matrix Pixel Clock 16x16 - 2026           (ESP32 NodeMCU)                     ║"
     echo "║                                                                                   ║"
     echo "║  E - Erase all ESP32 flash content only                                           ║"
     echo "║  X - Exit the script without flashing the ESP32                                   ║"
@@ -119,7 +120,13 @@ while true; do
             myProject="School Timetable - 2025"
             eraseESP="0"
             break
-            ;;			
+            ;;
+        9)
+            myURL="awsw.de/MatrixPixelClock16×16"
+            myProject="Matrix Pixel Clock 16x16 - 2026"
+            eraseESP="0"
+            break
+            ;;
         [eE])
             eraseESP="1"
             myProject="JUST ERASE THE ESP32 ONLY"
